@@ -1,0 +1,7 @@
+/* List of possible trivia questions
+idea is for a question to have 3 answers, one correct.
+questions will have 1 or more 'catagories' assigned and it can randomly appear in any catagory the player selects that it is assigned to.
+
+*/
+
+//Questions will be listed below along with the correct answer and 2 incorrect yet feasable answers.
