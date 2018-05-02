@@ -36,4 +36,4 @@ int main() {
     }
     cout << "Congratulations you finished with " << scores.back() << " points!"<< endl;
 }
-}
+
