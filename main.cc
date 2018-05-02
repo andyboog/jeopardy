@@ -7,6 +7,7 @@
 using namespace std;
 
 int main() {
+
 	cout << "Welcome to Jeopardy!" << endl;
 	cout << "Here's your first question for 100 points" << endl;
 	cout << "What's the first letterin the alphabet?" << endl;
