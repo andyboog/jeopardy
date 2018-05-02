@@ -1,6 +1,6 @@
 #include<iostream>
 #include<queue>
-#include<scores.h> 
+#include "scores.h" 
 
 using namespace std; 
 int main(){
