@@ -34,6 +34,6 @@ int main() {
         scores.push(incorrect(scores, 200));
         cout << "That was incorrect!" << endl;
     }
-    cout << "Your current score is: " << scores.back() << endl;
+    cout << "Congratulations you finished with " << scores.back() << " points!"<< endl;
 }
 }
