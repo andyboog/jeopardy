@@ -2,6 +2,7 @@
 #include<cmath>
 #include<queue>
 #include "scores.h"
+#include "Jeopardyart.h"
 
 using namespace std;
 
