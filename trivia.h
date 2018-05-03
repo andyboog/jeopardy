@@ -7,15 +7,17 @@
 //let me know if you would like to do something different
 
 bool gaming(int points){
-    cout << "Backup Agents in Elite Beat Agents." << endl;
-    cout << "A. Who are Agents Morris and Derek?" << endl;
-    cout << "B. Who are Agents K and J?" << endl;
-    cout << "C. Who are Agents Mulder and Skully?" << endl;
-    cout << "type answer here: ";
-    char answer;
-    cin >> answer;
-    if(toupper(answer) == 'A'){
-        return true;
+    if(points == 100){
+        cout << "Backup Agents in Elite Beat Agents." << endl;
+        cout << "A. Who are Agents Morris and Derek?" << endl;
+        cout << "B. Who are Agents K and J?" << endl;
+        cout << "C. Who are Agents Mulder and Skully?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'A'){
+            return true;
+        }
+        else return false;
     }
-    else return false;
 }
