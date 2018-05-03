@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<string>
 #include<queue>
 #include "scores.h"
 #include "jeopardyArt.h"
@@ -8,7 +9,8 @@ using namespace std;
 
 int main() {
 
-	cout << "Welcome to Jeopardy!" << endl;
+	cout << "Welcome to..." << endl;
+	jeopardyArt();
 	cout << "Here's your first question for 100 points" << endl;
 	cout << "What's the first letterin the alphabet?" << endl;
 	cout << "a. A" << endl;
