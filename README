@@ -1,6 +1,6 @@
 This is JEOPARDY (or a slight variation of it)
 These are the roles (so far):
-  1. Java Translator - Kevin 
+  1. Networking - Kevin 
   2. Graphics - Josh
   3. Trivia Finder (don't know if this is the correct term)- Dylan
   4. Data Structures - Andrea
@@ -8,7 +8,7 @@ These are the roles (so far):
  Let's see how this goes! 
  
 **First Goal (try to have done by Monday or Wednesday?):
-  1. Kevin - research / get comfortable with commands in Java?
+  1. Kevin - work on networking
   2. Josh - find a cool way to write "Jeopardy" using ASCII art. 
   3. Dylan - create the question categories and add (at least, maybe?) one question to each category.
   4. Andrea - finish writing the data structure to calculate scores/keep track of lives. (Also, start working on main.) 
