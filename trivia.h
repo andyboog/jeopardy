@@ -21,3 +21,19 @@ bool gaming(int points){
         else return false;
     }
 }
+
+bool NorseMythology(int points){
+    if(points == 100){
+        cout << "Commonly believed to be one in the same with Odins Wife Frigga" << endl;
+        cout << "A. Who is Lady Sif?" << endl;
+        cout << "B. Who is Freya?" << endl;
+        cout << "C. Who is Laufay?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+}
