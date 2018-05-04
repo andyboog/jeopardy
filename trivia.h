@@ -37,3 +37,21 @@ bool NorseMythology(int points){
         else return false;
     }
 }
+
+bool AmericanHistory(int points){
+    if(points == 100){
+        //stupid sudo question
+        cout << "Colors of the American Flag" << endl;
+        cout << "A. What are Red, White, and Blue?" << endl;
+        cout << "B. What are Red and White?" << endl;
+        cout << "C. What are Red, Green, and Yellow?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'A'){
+            return true;
+        }
+        else return false;
+    }
+}
+        
