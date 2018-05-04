@@ -11,10 +11,14 @@ using namespace std;
 int main() {
 	queue<int>scores;
 	scores.push(0);
+	system("clear");
 	cout << "Welcome to..." << endl;
 	jeopardyArt();
-	cout << endl; 
-	cout << endl;
+	cout << "Type 'minion' to begin." << endl;
+	string response1;
+	cout << "Type here: ";
+	cin >> response1;
+	system("clear");
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
@@ -29,6 +33,7 @@ int main() {
 	//Sorry bout that! I'm working on adding the other ones right now.
 	int points;
 	cin >> points;
+	system("clear");
 	if(category == "GAMING"){
 		if(gaming(points)){
 			cout << "That is correct!" << endl;
