@@ -14,9 +14,5 @@ int correct(queue<int>a, int b) {
 // for answering the question incorrectly
 int incorrect(queue<int>c, int d) {
     int new_points = c.back() - d;
-    if (new_points <= 0) {
-        cout << "you lose!" << endl;
-        exit(0);
-    }
     return new_points;
 }
