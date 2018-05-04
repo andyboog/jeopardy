@@ -201,49 +201,49 @@ bool Disney(int points){
     }
 	    if(points == 200){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "Aladdin's pet monkey" << endl;
+        cout << "who is Apu?" << endl;
+        cout << "who is Jafar?" << endl;
+        cout << "who is Abu?" << endl;//correct
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 300){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "In Beauty and the Beast, how many eggs does Gaston eat for breakfast?" << endl;
+        cout << "what is a half dozen?" << endl;
+        cout << "what is a dozen?" << endl;
+        cout << "what is 5 dozen?" << endl;//correct
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
 	if(points == 400){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "In Mulan, which actor played the voice of Mushu?" << endl;
+        cout << "who is Eddie Murphy?" << endl;//correct
+        cout << "who is Sean Paul?" << endl;
+        cout << "who is Chris Rock?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'A'){
             return true;
         }
         else return false;
     }
     if(points == 500){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "Which Disney film was the first to use the wide screen Cinema Scope?" << endl;
+        cout << "what is the Aristocats?" << endl;
+        cout << "what is Lady and the Tramp?" << endl;//correct
+        cout << "what is the Lion King?" << endl;
         char answer;
         cin >> answer;
         if(toupper(answer) == 'B'){
