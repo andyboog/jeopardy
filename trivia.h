@@ -76,7 +76,7 @@ bool gaming(int points){
 
 bool NorseMythology(int points){
     if(points == 100){
-        cout << "Commonly believed to be one in the same with Odins Wife Frigga" << endl;
+        cout << "Commonly believed to be one in the same with Odins Wife Frigga." << endl;
         cout << "A. Who is Lady Sif?" << endl;
         cout << "B. Who is Freya?" << endl;
         cout << "C. Who is Laufay?" << endl;
@@ -89,7 +89,7 @@ bool NorseMythology(int points){
         else return false;
     }
     if(points == 200){
-        cout << "The end of the world according to Norse mythology" << endl;
+        cout << "The end of the world according to Norse mythology." << endl;
         cout << "A. What is Ragnarok?" << endl;
         cout << "B. What is Mjolnir?" << endl;
         cout << "C. What is Gungnir?" << endl;
