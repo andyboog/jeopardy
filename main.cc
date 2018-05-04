@@ -23,6 +23,8 @@ int main() {
 	cout << "Awesome! Next you will need to choose how many points you would like the question to be worth." << endl;
 	cout << "The points range from 100 - 600 by increments of 100." << endl;
 	cout << "Note: You can only choose each point value once throughout the game." << endl;
+	cout << "ALSO ONLY 100 WORKS AT THIS TIME!!!!!" << endl;
+	//Sorry bout that! I'm working on adding the other ones right now.
 	int points;
 	cin >> points;
 	if(category == "GAMING"){
@@ -84,6 +86,11 @@ int main() {
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
+	}
+	else if (category == "JEOPARDY"){
+	//I'll also add a sudo question for this category
+		cout << "UNDER CONSTRUCTION!!!! SORRYYY!!!" << endl;
+		exit(0);
 	}
 	/*cout << "Here's your first question for 100 points" << endl;
 	cout << "What's the first letterin the alphabet?" << endl;
