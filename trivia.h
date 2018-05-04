@@ -88,6 +88,19 @@ bool NorseMythology(int points){
         }
         else return false;
     }
+    if(points == 200){
+        cout << "The end of the world according to Norse mythology" << endl;
+        cout << "A. What is Ragnarok?" << endl;
+        cout << "B. What is Mjolnir?" << endl;
+        cout << "C. What is Gungnir?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'A'){
+            return true;
+        }
+        else return false;
+    }
 }
 
 bool AmericanHistory(int points){
