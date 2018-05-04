@@ -14,10 +14,16 @@ int main() {
 	system("clear");
 	cout << "Welcome to..." << endl;
 	jeopardyArt();
-	cout << "Type 'minion' to begin." << endl;
+	cout << "Type 'MINION' to begin." << endl;
 	string response1;
 	cout << "Type here: ";
 	cin >> response1;
+	if(response1 != "MINION"){
+		cout << "exiting..." << endl;
+		usleep(30000);
+		system("clear");
+		exit(0);
+	}
 	system("clear");
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
