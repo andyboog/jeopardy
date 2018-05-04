@@ -4,6 +4,7 @@
 #include<queue>
 #include "scores.h"
 #include "jeopardyArt.h"
+#include "trivia.h" 
 
 using namespace std;
 
