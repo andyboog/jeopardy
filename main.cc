@@ -22,7 +22,7 @@ int main() {
 	cin >> response1;
 	if(response1 != "MINION"){
 		cout << "exiting..." << endl;
-		sleep(30);
+		sleep(3);
 		system("clear");
 		exit(0);
 	}
