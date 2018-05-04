@@ -33,7 +33,8 @@ int main() {
 	cout << "Note: please type the category names as they are typed above." << endl;
 	string category;
 	cout << "Category: ";
-	cin >> category;
+	cin.ignore();
+	getline(cin, category);
 	cout << "Awesome! Next you will need to choose how many points you would like the question to be worth." << endl;
 	cout << "The points range from 100 - 600 by increments of 100." << endl;
 	cout << "Note: You can only choose each point value once throughout the game." << endl;
