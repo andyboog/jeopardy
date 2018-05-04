@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
 	queue<int>scores;
-	score.push(0);
+	scores.push(0);
 	cout << "Welcome to..." << endl;
 	jeopardyArt();
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
