@@ -13,6 +13,8 @@ int main() {
 	scores.push(0);
 	cout << "Welcome to..." << endl;
 	jeopardyArt();
+	cout << endl; 
+	cout << endl;
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
