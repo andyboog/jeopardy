@@ -53,6 +53,71 @@ bool AmericanHistory(int points){
         }
         else return false;
     }
+	if(points == 200){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 300){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+	if(points == 400){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 500){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 600){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
 }
 
 bool Disney(int points){
@@ -62,6 +127,71 @@ bool Disney(int points){
         cout << "A. Who is Fiona?" << endl;
         cout << "B. Who is Rapunzel?" << endl;
         cout << "C. Who is Ariel?" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+	    if(points == 200){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 300){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+	if(points == 400){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 500){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 600){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
         char answer;
         cin >> answer;
         if(toupper(answer) == 'B'){
@@ -84,6 +214,71 @@ bool BowlingTerms(int points){
         char answer;
         cin >> answer;
         if(toupper(answer) == 'A'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 200){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 300){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+	if(points == 400){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 500){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 600){
+        //another sudo question
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
             return true;
         }
         else return false;
