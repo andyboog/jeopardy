@@ -2,6 +2,8 @@
 #include<cmath>
 #include<string>
 #include<queue>
+#include<vector>
+#include<unistd.h>
 #include "scores.h"
 #include "jeopardyArt.h"
 #include "trivia.h" 
