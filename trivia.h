@@ -20,6 +20,58 @@ bool gaming(int points){
         }
         else return false;
     }
+    if(points == 200){
+        cout << "What you have been eaten by." << endl;
+        cout << "A. What is Glue?" << endl;
+        cout << "B. What is a Frue" << endl;
+        cout << "C. What is a Grue?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'C'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 300){
+        cout << "The mute protaginist of the Half-Life series." << endl;
+        cout << "A. Who is Gideon Freidmen?" << endl;
+        cout << "B. Who is Gordan Freeman?" << endl;
+        cout << "C. Who is Grace Froman?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 400){
+        cout << "Donkey Kongs captive in ... Donkey Kong." << endl;
+        cout << "A. Who is Princess Peach?" << endl;
+        cout << "B. Who is Princess Daisy?" << endl;
+        cout << "C. Who is Pauline?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'C'){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 500){
+        cout << "Up up down down left right left right B A START" << endl;
+        cout << "A. What is the Contra code?" << endl;
+        cout << "B. What is the Konami code?" << endl;
+        cout << "C. What is the Koi code?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
 }
 
 bool NorseMythology(int points){
