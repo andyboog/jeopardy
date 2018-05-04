@@ -62,7 +62,7 @@ int main() {
 
 	}
 	else if (category == "DISNEY"){
-		if(disney(points)){
+		if(Disney(points)){
 			cout << "That is correct!" << endl;
 			scores.push(correct(scores, points));
 		}
