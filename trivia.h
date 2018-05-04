@@ -54,4 +54,40 @@ bool AmericanHistory(int points){
         else return false;
     }
 }
+
+bool Disney(int points){
+    if(points == 100){
+        //another sudo question
+        cout << "She was trapped in a tower" << endl;
+        cout << "A. Who is Fiona?" << endl;
+        cout << "B. Who is Rapunzel?" << endl;
+        cout << "C. Who is Ariel?" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'B'){
+            return true;
+        }
+        else return false;
+    }
+}
+
+//this is just a sudo category, since I'm not sure what Dylan wants the last one to be
+
+bool BowlingTerms(int points){
+    // get it?... it starts with a 'b'...hehe :)
+    if(points == 100){
+        // definitely a sudo question
+        cout << "Bowling trash talk" << endl;
+        cout << "A. What is balk?" << endl;
+        cout << "B. What is balsa?" << endl;
+        cout << "C. What is jam?" << endl;
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == 'A'){
+            return true;
+        }
+        else return false;
+    }
+}
+        
         
