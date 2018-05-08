@@ -32,3 +32,32 @@ void jeopardyArt(){
 		cout<<j;
 		cout<<k;
 }
+
+void categoryArt(){
+		//stores ASCII art into strings
+		string a = " .----------------.  .----------------.  .----------------.  .----------------.  .----------------. \n"; 
+		string b = "| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |\n";
+		string c = "| |              | || |              | || |              | || |              | || |              | |\n";
+		string d = "| |              | || |              | || |              | || |              | || |              | |\n";
+		string e = "| |              | || |     NORSE    | || |   AMERICAN   | || |              | || |    BOWLING   | |\n";
+		string f = "| |    GAMING    | || |   MYTHOLOGY  | || |   HISTORY    | || |    DISNEY    | || |     TERMS    | |\n";
+		string g = "| |              | || |              | || |              | || |              | || |              | |\n";
+		string h = "| |              | || |              | || |              | || |              | || |              | |\n";
+		string i = "| |              | || |              | || |              | || |              | || |              | |\n";
+		string j = "| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |\n";
+		string k = " '----------------'  '----------------'  '----------------'  '----------------'  '----------------' \n";
+		//displays string in order to create art
+		cout<<a;
+		cout<<b;
+		cout<<c;
+		cout<<d;
+		cout<<e;
+		cout<<f;
+		cout<<g;
+		cout<<h;
+		cout<<i;
+		cout<<j;
+		cout<<k;
+
+}
+

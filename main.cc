@@ -6,7 +6,7 @@
 #include<unistd.h>
 #include "scores.h"
 #include "jeopardyArt.h"
-#include "trivia.h" 
+#include "trivia.h"
 
 using namespace std;
 
@@ -20,13 +20,14 @@ int main() {
 	string response1;
 	cout << "Type here: ";
 	cin >> response1;
-	if(response1 != "MINION"){
+	if (response1 != "MINION") {
 		cout << "exiting..." << endl;
 		sleep(3);
 		system("clear");
 		exit(0);
 	}
 	system("clear");
+	categoryArt();
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
@@ -43,68 +44,58 @@ int main() {
 	int points;
 	cin >> points;
 	system("clear");
-	if(category == "GAMING"){
-		if(gaming(points)){
+	if (category == "GAMING") {
+		if (gaming(points)) {
 			cout << "That is correct!" << endl;
 			scores.push(correct(scores, points));
-		}
-		else {
+		} else {
 			cout << "Sorry! That is incorrect!" << endl;
 			scores.push(incorrect(scores, points));
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
-	}
-	else if (category == "NORSE MYTHOLOGY"){
-		if(NorseMythology(points)){
+	} else if (category == "NORSE MYTHOLOGY") {
+		if (NorseMythology(points)) {
 			cout << "That is correct!" << endl;
 			scores.push(correct(scores, points));
-		}
-		else {
+		} else {
 			cout << "Sorry! That is incorrect!" << endl;
 			scores.push(incorrect(scores, points));
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
-	}
-	else if (category == "AMERICAN HISTORY"){
-		if(AmericanHistory(points)){
+	} else if (category == "AMERICAN HISTORY") {
+		if (AmericanHistory(points)) {
 			cout << "That is correct!" << endl;
 			scores.push(correct(scores, points));
-		}
-		else {
+		} else {
 			cout << "Sorry! That is incorrect!" << endl;
 			scores.push(incorrect(scores, points));
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
-	}
-	else if (category == "DISNEY"){
-		if(Disney(points)){
+	} else if (category == "DISNEY") {
+		if (Disney(points)) {
 			cout << "That is correct!" << endl;
 			scores.push(correct(scores, points));
-		}
-		else {
+		} else {
 			cout << "Sorry! That is incorrect!" << endl;
 			scores.push(incorrect(scores, points));
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
-	}
-	else if (category == "BOWLING TERMS"){
-		if(BowlingTerms(points)){
+	} else if (category == "BOWLING TERMS") {
+		if (BowlingTerms(points)) {
 			cout << "That is correct!" << endl;
 			scores.push(correct(scores, points));
-		}
-		else {
+		} else {
 			cout << "Sorry! That is incorrect!" << endl;
 			scores.push(incorrect(scores, points));
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
-	}
-	else if (category == "JEOPARDY"){
-	//I'll also add a sudo question for this category
+	} else if (category == "JEOPARDY") {
+		//I'll also add a sudo question for this category
 		cout << "UNDER CONSTRUCTION!!!! SORRYYY!!!" << endl;
 		exit(0);
 	}
