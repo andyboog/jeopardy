@@ -1,0 +1,12 @@
+CC = g++
+CCFLAGS = -std=c++11
+
+all: kevinsClient kevinsServer
+
+kevinsClient: kevinsClient.cc
+	$(CC) $(CCFLAGS) -O3 kevinsClient.cc -lboost_system -lboost_thread -pthread -okevinsClient
+
+kevinsServer: kevinsServer.cc
+	$(CC) $(CCFLAGS) -O3 kevinsServer.cc -lboost_system -lboost_thread -pthread -okevinsServer
+clean:
+	rm -f kevinsClient kevinsServer *.o core

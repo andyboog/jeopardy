@@ -49,6 +49,11 @@ int main() {
 		exit(0);
 	}
 	std::system("clear");
+	string name;
+	cout << "Please enter in your name:" ;
+	cin >> name;
+	asio::write(socket, boost::asio::buffer(name),asio::transfer_all());
+	std::system("clear");
 	cout << "To decide who is going first please choose a number between 1-10\n";
 	int x;
 	cin >> x;

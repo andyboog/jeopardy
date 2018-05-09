@@ -13,12 +13,16 @@
 #include <string>
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
+#include "scores.h"
+
 
 using namespace std;
 using namespace boost;
 using boost::asio::ip::tcp;
 
 int main() {
+	queue<int> scores;
+	scores.push(0);
 	int port = 1025;
 	srand(time (NULL));
 	try {
@@ -34,9 +38,13 @@ int main() {
 		int randnum = rand() % 10;
 		boost::array<char, 128> buf1;
 		boost::array<char, 128> buf2;
+		boost::array<char, 128> nam1;
+		boost::array<char, 128> nam2;
 		system::error_code error;
-		string name1;
-		string name2;
+		size_t len3 = socket1.read_some(asio::buffer(nam1), error);
+		size_t len4 = socket2.read_some(asio::buffer(nam2), error);
+		string name1 = nam1.data();
+		string name2 = nam2.data();
 		size_t len1 = socket1.read_some(asio::buffer(buf1), error);
 		size_t len2 = socket2.read_some(asio::buffer(buf2), error);
 		int g1 = stoi(buf1.data());
