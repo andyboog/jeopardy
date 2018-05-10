@@ -103,7 +103,8 @@ int main() {
 	cout << "ALSO ONLY 100 WORKS AT THIS TIME!!!!!" << endl;
 	//Sorry bout that! I'm working on adding the other ones right now.
 	int points;
-	int score;
+	int score1;
+	int score2;
 	string pointStr;
 	cin >> points;
 	pointStr = to_string(points);
@@ -174,13 +175,28 @@ int main() {
 		}
 	boost::array<char, 128> pts;
 	size_t len5 = socket.read_some(asio::buffer(pts), error);
-	score = stoi(pts.data());
-	cout << "Current Point Value: " << score << endl;
+	string placeholder = pts.data();
+	string sc1;
+	string sc2;
+	int j = 0;
+	for(int i = 0; i < placeholder.length()-3; ++i){
+		sc1[j] = placeholder[i];
+		++j;
+	}
+	score1 = stoi(sc1);
+	j = 0;
+	for(int i = 3; i < placeholder.length(); ++i){
+		sc2[j] = placeholder[i];
+		++j;
+	}
+	score1 = stoi(sc1);
+	score2 = stoi(sc2);
+	cout << "Your score: " << score1 << endl;
+	cout << compname.data() << "'s score: " << score2 << endl;
 	cout << "Press Enter to continue."<< endl;
 	string input;
 	cin.ignore();
 	getline(cin, input);
-	               //cout << compname.data() << "'s score: " << << endl;
 	} else { 
 		cout << category <<" "<< points << " already chosen, please choose another." << endl;
 		cout << "Press Enter to continue."<<endl;
@@ -188,11 +204,16 @@ int main() {
 		cin.ignore();
 		getline(cin, input);
 	}
-	if(score < 0){
+	/*if(score1 < 0){
 		std::system("clear");
 		cout << "You Lose." << endl;
 		exit(1);
 	}
+	else if(score1 > 0){
+		 std::system("clear");
+	     cout << "You Win." << endl;
+	     exit(1);
+	}*/
 	
 	               }
 	               /*cout << "Here's your first question for 100 points" << endl;
