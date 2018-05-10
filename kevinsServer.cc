@@ -21,8 +21,10 @@ using namespace boost;
 using boost::asio::ip::tcp;
 
 int main() {
-	queue<int> scores;
-	scores.push(0);
+	queue<int> scores1;
+	queue<int> scores2;
+	scores1.push(0);
+	scores2.push(0);
 	int port = 1025;
 	srand(time (NULL));
 	try {
@@ -36,8 +38,8 @@ int main() {
 		//asio::write(socket1, boost::asio::buffer("Welcome to..\n"),asio::transfer_all(), ignored_error);
 		//asio::write(socket2, boost::asio::buffer("Welcome to..\n"),asio::transfer_all(), ignored_error);
 		int randnum = rand() % 10;
-		boost::array<char, 128> buf1;
-		boost::array<char, 128> buf2;
+		//boost::array<char, 128> buf1;
+		//boost::array<char, 128> buf2;
 		boost::array<char, 128> nam1;
 		boost::array<char, 128> nam2;
 		system::error_code error;
@@ -45,14 +47,13 @@ int main() {
 		size_t len4 = socket2.read_some(asio::buffer(nam2), error);
 		string name1 = nam1.data();
 		string name2 = nam2.data();
-		size_t len1 = socket1.read_some(asio::buffer(buf1), error);
-		size_t len2 = socket2.read_some(asio::buffer(buf2), error);
-		int g1 = stoi(buf1.data());
-		int g2 = stoi(buf2.data());
-		int c1 = abs(randnum - g1);
-		int c2 = abs(randnum - g2);
-		//string First = " goes first.\n";
-		if(c1 < c2) {
+		//size_t len1 = socket1.read_some(asio::buffer(buf1), error);
+		//size_t len2 = socket2.read_some(asio::buffer(buf2), error);
+		//int g1 = stoi(buf1.data());
+		//int g2 = stoi(buf2.data());
+		//int c1 = abs(randnum - g1);
+		//int c2 = abs(randnum - g2);
+		/*if(c1 < c2) {
 		string First = name1 + " goes first.\n";
 			asio::write(socket1, boost::asio::buffer(First),asio::transfer_all(), ignored_error);
 			asio::write(socket2, boost::asio::buffer(First),asio::transfer_all(), ignored_error);
@@ -60,7 +61,41 @@ int main() {
 		string First = name2 + " goes first.\n";
 			asio::write(socket1, boost::asio::buffer(First),asio::transfer_all(), ignored_error);
 			asio::write(socket2, boost::asio::buffer(First),asio::transfer_all(), ignored_error);
+		}*/
+		string x = "You are playing with " + name1 + "\n";
+		string y = "You are playing with " + name2 + "\n";
+		asio::write(socket1, boost::asio::buffer(y),asio::transfer_all(), ignored_error);
+		asio::write(socket2, boost::asio::buffer(x),asio::transfer_all(), ignored_error);
+		while(true){
+			int points1;
+			int points2;
+			boost::array<char, 128> buf1;
+			boost::array<char, 128> buf2;
+			size_t len1 = socket1.read_some(asio::buffer(buf1), error);
+			size_t len2 = socket2.read_some(asio::buffer(buf2), error);
+			points1 = stoi(buf1.data());
+			points2 = stoi(buf2.data());
+			if(points1 < 0){
+				points1 *= -1;
+				scores1.push(incorrect(scores1, points1));
+			}else {
+				scores1.push(correct(scores1, points1));
+			}
+			if(points2 < 0){
+				points2 *= -1;
+				scores2.push(incorrect(scores2, points2));
+			}else {
+				scores2.push(correct(scores2, points2));
+			}
+			string w = to_string(scores1.back());
+			string z = to_string(scores2.back());
+			asio::write(socket1, boost::asio::buffer(w),asio::transfer_all(), ignored_error);
+			asio::write(socket2, boost::asio::buffer(z),asio::transfer_all(), ignored_error);
+			if(scores1.back() < 0 || scores2.back() < 0)break;
+				
 		}
+
+
 	} catch (std::exception& e) {
 		cerr << e.what() << endl;
 	}

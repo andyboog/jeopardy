@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <cstring>
+#include <sstream>
 #include <queue>
 #include <vector>
 #include <unistd.h>
@@ -18,6 +20,13 @@ using boost::asio::ip::tcp;
 asio::io_service io_service;
 tcp::resolver resolver(io_service);
 
+string convert(string s){
+	for(int i = 0; i < s.length(); i ++){
+		s[i] = toupper(s[i]);
+	}
+	return s;
+}
+
 int main() {
 	tcp::resolver::query query("127.0.0.1", "1025");
 	//  tcp::resolver::query query(argv[1], argv[2]);
@@ -33,8 +42,8 @@ int main() {
 	if (error)
 		throw system::system_error(error);
 
-	//queue<int>scores;
-	//scores.push(0);
+	queue<int>scores;
+	scores.push(0);
 	//system("clear");
 	cout << "Welcome to..." << endl;
 	jeopardyArt();
@@ -42,6 +51,7 @@ int main() {
 	string response1;
 	cout << "Type here: ";
 	cin >> response1;
+	response1 = convert(response1);
 	if (response1 != "MINION") {
 		cout << "exiting..." << endl;
 		sleep(3);
@@ -54,88 +64,125 @@ int main() {
 	cin >> name;
 	asio::write(socket, boost::asio::buffer(name),asio::transfer_all());
 	std::system("clear");
-	cout << "To decide who is going first please choose a number between 1-10\n";
+	/*cout << "To decide who is going first please choose a number between 1-10\n";
 	int x;
 	cin >> x;
 	string num1 = to_string(x);
-    asio::write(socket, boost::asio::buffer(num1),asio::transfer_all());
-	std::system("clear");
+    asio::write(socket, boost::asio::buffer(num1),asio::transfer_all());*/
+	//std::system("clear");
 	boost::array<char, 128> buf;
 	size_t len = socket.read_some(asio::buffer(buf), error);
-	cout << buf.data()<< endl;
-/*	
+	//cout << buf.data()<< endl;
+	string pre = buf.data();
+	string compname;
+	int j = 0;
+	for(int i = 21; i < pre.length()-1; ++i){
+		compname[j] = pre[i];
+		++j;
+	}
+//	sleep(500);
+//	while(1){	
+	std::system("clear");
+	categoryArt();
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
 	cout << "Note: please type the category names as they are typed above." << endl;
+	cout << pre;
 	string category;
 	cout << "Category: ";
 	cin.ignore();
 	getline(cin, category);
+	category = convert(category);
 	cout << "Awesome! Next you will need to choose how many points you would like the question to be worth." << endl;
 	cout << "The points range from 100 - 600 by increments of 100." << endl;
 	cout << "Note: You can only choose each point value once throughout the game." << endl;
 	cout << "ALSO ONLY 100 WORKS AT THIS TIME!!!!!" << endl;
 	//Sorry bout that! I'm working on adding the other ones right now.
 	int points;
+	string pointStr;
 	cin >> points;
-	system("clear");
+	pointStr = to_string(points);
+	std::system("clear");
 	if (category == "GAMING") {
 		if (gaming(points)) {
 			cout << "That is correct!" << endl;
-			scores.push(correct(scores, points));
+			cout << pointStr << endl;
+			//scores.push(correct(scores, points));
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		} else {
 			cout << "Sorry! That is incorrect!" << endl;
-			scores.push(incorrect(scores, points));
+			//scores.push(incorrect(scores, points));
+			pointStr = to_string(-points);
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		}
-		cout << "Current Point Value: " << scores.back() << endl;
+		//cout << "Current Point Value: " << scores.back() << endl;
 
 	} else if (category == "NORSE MYTHOLOGY") {
 		if (NorseMythology(points)) {
 			cout << "That is correct!" << endl;
-			scores.push(correct(scores, points));
+			//scores.push(correct(scores, points));
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		} else {
 			cout << "Sorry! That is incorrect!" << endl;
-			scores.push(incorrect(scores, points));
+			//scores.push(incorrect(scores, points));
+			pointStr = to_string(-points);
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		}
-		cout << "Current Point Value: " << scores.back() << endl;
+		//cout << "Current Point Value: " << scores.back() << endl;
 
 	} else if (category == "AMERICAN HISTORY") {
 		if (AmericanHistory(points)) {
 			cout << "That is correct!" << endl;
-			scores.push(correct(scores, points));
+			//scores.push(correct(scores, points));
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		} else {
 			cout << "Sorry! That is incorrect!" << endl;
-			scores.push(incorrect(scores, points));
+			//scores.push(incorrect(scores, points));
+			pointStr = to_string(-points);
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		}
-		cout << "Current Point Value: " << scores.back() << endl;
+		//cout << "Current Point Value: " << scores.back() << endl;
 
 	} else if (category == "DISNEY") {
 		if (Disney(points)) {
 			cout << "That is correct!" << endl;
-			scores.push(correct(scores, points));
+			//scores.push(correct(scores, points));
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		} else {
 			cout << "Sorry! That is incorrect!" << endl;
-			scores.push(incorrect(scores, points));
+			//scores.push(incorrect(scores, points));
+			pointStr = to_string(-points);
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		}
-		cout << "Current Point Value: " << scores.back() << endl;
+		//cout << "Current Point Value: " << scores.back() << endl;
 
 	} else if (category == "BOWLING TERMS") {
 		if (BowlingTerms(points)) {
 			cout << "That is correct!" << endl;
-			scores.push(correct(scores, points));
+			//scores.push(correct(scores, points));
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		} else {
 			cout << "Sorry! That is incorrect!" << endl;
-			scores.push(incorrect(scores, points));
+			//scores.push(incorrect(scores, points));
+			pointStr = to_string(-points);
+			asio::write(socket, boost::asio::buffer(pointStr),asio::transfer_all());
 		}
-		cout << "Current Point Value: " << scores.back() << endl;
+		//cout << "Current Point Value: " << scores.back() << endl;
 
 	} else if (category == "JEOPARDY") {
 		//I'll also add a sudo question for this category
 		cout << "UNDER CONSTRUCTION!!!! SORRYYY!!!" << endl;
 		exit(0);
 	}
-	cout << "Here's your first question for 100 points" << endl;
+	boost::array<char, 128> pts;
+	size_t ptlen = socket.read_some(asio::buffer(pts), error);
+	int score = stoi(pts.data());
+	cout << "Current Point Value: " << score << endl;
+	//cout << compname.data() << "'s score: " << << endl;
+	//sleep(500);
+	//}
+	/*cout << "Here's your first question for 100 points" << endl;
 	cout << "What's the first letterin the alphabet?" << endl;
 	cout << "a. A" << endl;
 	cout << "b. B" << endl;
