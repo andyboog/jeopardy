@@ -91,7 +91,14 @@ int main() {
 			string z = to_string(scores2.back());
 			asio::write(socket1, boost::asio::buffer(w),asio::transfer_all(), ignored_error);
 			asio::write(socket2, boost::asio::buffer(z),asio::transfer_all(), ignored_error);
-			if(scores1.back() < 0 || scores2.back() < 0)break;
+			if(scores1.back() < 0){
+				socket1.close();
+			}
+			if(scores2.back() < 0){
+				socket2.close();
+			}
+			if(scores1.back() < 0 && scores2.back()) {
+				break;}
 				
 		}
 
