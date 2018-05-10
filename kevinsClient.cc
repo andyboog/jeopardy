@@ -108,6 +108,14 @@ int main() {
 	cin >> points;
 	pointStr = to_string(points);
 	std::system("clear");
+	if(category != "GAMING" && category != "NORSE MYTHOLOGY" && category != "AMERICAN HISTORY" && category != "JEOPARDY" && category != "DISNEY" && category != "BOWLING TERMS"){
+		cout << "Invalid Input" << endl;
+		cout << "Press Enter to continue." << endl;
+		string input;
+		cin.ignore();
+		getline(cin, input);
+		continue;
+	}
 	if (!checker(category, points)) {
 	if (category == "GAMING") {
 			if (gaming(points)) {
