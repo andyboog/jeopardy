@@ -24,7 +24,6 @@ tcp::resolver resolver(io_service);
 string convert(string f){
 	for (int i = 0; i < f.length(); i++) {
 		f[i] = toupper(f[i]);
-		cout << f[i]<< endl;
 	}
 	return f;
 };
@@ -81,27 +80,28 @@ int main() {
 		++j;
 	}
 //	sleep(500);
-	cin.ignore();
-	while(1){
-	std::system("clear");
-	categoryArt();
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
+	cout << "Press Enter to continue." << endl;
+	string input;
+	cin.ignore();
+	getline(cin, input);
+	while(1){
+	std::system("clear");
+	categoryArt();
 	cout << "Note: please type the category names as they are typed above." << endl;
 	cout << pre;
 	string category;
 	cout << "Category: ";
 	//cin.ignore();
 	getline(cin, category);
-	cout << category << endl;
 	category = convert(category);
 	cout << "Awesome! Next you will need to choose how many points you would like the question to be worth." << endl;
 	cout << "The points range from 100 - 600 by increments of 100." << endl;
 	cout << "Note: You can only choose each point value once throughout the game." << endl;
 	cout << "ALSO ONLY 100 WORKS AT THIS TIME!!!!!" << endl;
 	//Sorry bout that! I'm working on adding the other ones right now.
-	cout << category << endl;
 	int points;
 	int score;
 	string pointStr;
@@ -169,12 +169,16 @@ int main() {
 	score = stoi(pts.data());
 	cout << "Current Point Value: " << score << endl;
 	cout << "Press Enter to continue."<< endl;
-	char input = cin.get();
+	string input;
+	cin.ignore();
+	getline(cin, input);
 	               //cout << compname.data() << "'s score: " << << endl;
 	} else { 
 		cout << category <<" "<< points << " already chosen, please choose another." << endl;
 		cout << "Press Enter to continue."<<endl;
-		char input = cin.get();
+		string input;
+		cin.ignore();
+		getline(cin, input);
 	}
 	if(score < 0){
 		std::system("clear");
