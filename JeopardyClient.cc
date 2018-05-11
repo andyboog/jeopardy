@@ -80,6 +80,7 @@ int main() {
 		++j;
 	}
 //	sleep(500);
+	categoryArt();
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
