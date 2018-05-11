@@ -14,15 +14,15 @@
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
 #include "scores.h"
-
+#include "queue.h"
 
 using namespace std;
 using namespace boost;
 using boost::asio::ip::tcp;
 
 int main() {
-	queue<int> scores1;
-	queue<int> scores2;
+	queue scores1;
+	queue scores2;
 	scores1.push(0);
 	scores2.push(0);
 	int port = 1025;
