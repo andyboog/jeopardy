@@ -154,7 +154,6 @@ bool NorseMythology(int points){
 
 bool AmericanHistory(int points){
     if(points == 100){
-        //stupid sudo question
         cout << "Colors of the American Flag" << endl;
         cout << "A. What are Red, White, and Blue?" << endl;
         cout << "B. What are Red and White?" << endl;
@@ -167,12 +166,11 @@ bool AmericanHistory(int points){
         }
         else return false;
     }
-	if(points == 200){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+    if(points == 200){
+        cout << "The era when flour sacks were at the peak of the fashion industry." << endl;
+        cout << "A. What is the Civil War?" << endl;
+        cout << "B. What is the Dust Bowl?" << endl;
+        cout << "C. What is the Great Depression?" << endl;
         char answer;
         cin >> answer;
         if(toupper(answer) == 'B'){
@@ -181,40 +179,37 @@ bool AmericanHistory(int points){
         else return false;
     }
     if(points == 300){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "Material on which the Delaration of Independence was originally written." << endl;
+        cout << "A. What is paper?" << endl;
+        cout << "B. What is wood?" << endl;
+        cout << "C. What is hemp" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
-	if(points == 400){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+    if(points == 400){
+        cout << "The last time the Liberty Bell was last wrung." << endl;
+        cout << "A. When was 2015?" << endl;
+        cout << "B. When was 1776?" << endl;
+        cout << "C. When was 1846?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 500){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "America's first ginger president." << endl;
+        cout << "A. Who was Thomas Jefferson?" << endl;
+        cout << "B. Who was Franklin Roosevelt?" << endl;
+        cout << "C. Who was George Washington?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'A'){
             return true;
         }
         else return false;
