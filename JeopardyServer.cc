@@ -96,20 +96,32 @@ int main() {
 			asio::write(socket1, boost::asio::buffer(z),asio::transfer_all(), ignored_error);
 			asio::write(socket2, boost::asio::buffer(w),asio::transfer_all(), ignored_error);
 			if(scores1.back() < 0 && scores2.back() < 0) {
+				boost::system::error_code ec;
+				socket1.shutdown(boost::asio::ip::tcp::socket::shutdown_send, ec);
+				socket2.shutdown(boost::asio::ip::tcp::socket::shutdown_send, ec);
 				socket1.close();
 				socket2.close();
-				break;}
+				break;
+			}
 			if(scores1.back() < 0 && scores2.back() > 0){
 				//asio::write(socket1, boost::asio::buffer(lose),asio::transfer_all(), ignored_error);
 				//asio::write(socket2, boost::asio::buffer(win),asio::transfer_all(), ignored_error);
+				boost::system::error_code ec;
+				socket1.shutdown(boost::asio::ip::tcp::socket::shutdown_send, ec);
+				socket2.shutdown(boost::asio::ip::tcp::socket::shutdown_send, ec);
 				socket2.close();
 				socket1.close();
+				break;
 			}
 			if(scores2.back() < 0 && scores1.back() > 0){
 				//asio::write(socket1, boost::asio::buffer(win),asio::transfer_all(), ignored_error);
 				//asio::write(socket2, boost::asio::buffer(lose),asio::transfer_all(), ignored_error);
+				boost::system::error_code ec;
+				socket1.shutdown(boost::asio::ip::tcp::socket::shutdown_send, ec);
+				socket2.shutdown(boost::asio::ip::tcp::socket::shutdown_send, ec);
 				socket1.close();
 				socket2.close();
+				break;
 			}
 		}	
 				

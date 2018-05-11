@@ -200,7 +200,8 @@ int main() {
 			cin.ignore();
 			getline(cin, input);
 		}
-	numQues--;	
+	numQues--;
+	if(score1 < 0 || score2 < 0) break;
 	}
 	if (score1 < 0 && score2 < 0) {
 		std::system("clear");
