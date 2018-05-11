@@ -208,27 +208,27 @@ int main() {
 	}
 	if (score1 < 0 && score2 < 0) {
 		std::system("clear");
-		cout << "You Lose.\n";
+		loseArt();
 		exit(1);
 	}
 	if (score1 < 0 && score2 > 0) {
 		std::system("clear");
-		cout << "You Lose!\n";
+		loseArt();
 		exit(1);
 	} 
 	if (score1 > 0 && score2 < 0) {
 		std::system("clear");
-		cout << "You Win!\n";
+		winArt();
 		exit(1);
 	}
 	if(score1 > score2){
-		std::system("clear");
-	    cout << "You Win!\n";
+	    std::system("clear");
+	    winArt();
 	    exit(1);
 	}
 	if(score1 < score2){
-		std::system("clear");
-	    cout << "You Lose!\n";
+	    std::system("clear");
+	    loseArt();
 	    exit(1);
 	}
 
