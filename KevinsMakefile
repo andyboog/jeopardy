@@ -4,9 +4,9 @@ CCFLAGS = -std=c++11
 all: kevinsClient kevinsServer
 
 kevinsClient: kevinsClient.cc jeopardyArt.h trivia.h catchecker.h
-	$(CC) $(CCFLAGS) -O3 kevinsClient.cc -lboost_system -lboost_thread -pthread -okevinsClient
+	$(CC) $(CCFLAGS) -O3 kevinsClient.cc -lncurses -lboost_system -lboost_thread -pthread -okevinsClient
 
-kevinsServer: kevinsServer.cc scores.h
+kevinsServer: kevinsServer.cc scores.h queue.h
 	$(CC) $(CCFLAGS) -O3 kevinsServer.cc -lboost_system -lboost_thread -pthread -okevinsServer
 clean:
 	rm -f kevinsClient kevinsServer *.o core
