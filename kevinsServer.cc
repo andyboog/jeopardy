@@ -62,6 +62,8 @@ int main() {
 			asio::write(socket1, boost::asio::buffer(First),asio::transfer_all(), ignored_error);
 			asio::write(socket2, boost::asio::buffer(First),asio::transfer_all(), ignored_error);
 		}*/
+		//string win = "You Win!\n";
+		//string lose = "You Lose!\n";
 		string x = "You are playing with " + name1 + "\n";
 		string y = "You are playing with " + name2 + "\n";
 		asio::write(socket1, boost::asio::buffer(y),asio::transfer_all(), ignored_error);
@@ -91,18 +93,26 @@ int main() {
 			string z = to_string(scores2.back());
 			asio::write(socket1, boost::asio::buffer(w),asio::transfer_all(), ignored_error);
 			asio::write(socket2, boost::asio::buffer(z),asio::transfer_all(), ignored_error);
-			if(scores1.back() < 0){
+			asio::write(socket1, boost::asio::buffer(z),asio::transfer_all(), ignored_error);
+			asio::write(socket2, boost::asio::buffer(w),asio::transfer_all(), ignored_error);
+			if(scores1.back() < 0 && scores2.back() < 0) {
+				socket1.close();
+				socket2.close();
+				break;}
+			if(scores1.back() < 0 && scores2.back() > 0){
+				//asio::write(socket1, boost::asio::buffer(lose),asio::transfer_all(), ignored_error);
+				//asio::write(socket2, boost::asio::buffer(win),asio::transfer_all(), ignored_error);
+				socket2.close();
 				socket1.close();
 			}
-			if(scores2.back() < 0){
+			if(scores2.back() < 0 && scores1.back() > 0){
+				//asio::write(socket1, boost::asio::buffer(win),asio::transfer_all(), ignored_error);
+				//asio::write(socket2, boost::asio::buffer(lose),asio::transfer_all(), ignored_error);
+				socket1.close();
 				socket2.close();
 			}
-			if(scores1.back() < 0 && scores2.back()) {
-				break;}
+		}	
 				
-		}
-
-
 	} catch (std::exception& e) {
 		cerr << e.what() << endl;
 	}

@@ -87,7 +87,9 @@ int main() {
 	string input;
 	cin.ignore();
 	getline(cin, input);
-	while(1){
+	int score1 = 0;
+	int score2 = 0;
+	while(score1 >= 0 && score2 >= 0){
 	std::system("clear");
 	categoryArt();
 	cout << "Note: please type the category names as they are typed above." << endl;
@@ -103,8 +105,6 @@ int main() {
 	cout << "ALSO ONLY 100 WORKS AT THIS TIME!!!!!" << endl;
 	//Sorry bout that! I'm working on adding the other ones right now.
 	int points;
-	int score1;
-	int score2;
 	string pointStr;
 	cin >> points;
 	pointStr = to_string(points);
@@ -204,18 +204,22 @@ int main() {
 		cin.ignore();
 		getline(cin, input);
 	}
-	/*if(score1 < 0){
+	}
+	if(score1 < 0 && score2 < 0) {
 		std::system("clear");
-		cout << "You Lose." << endl;
+		cout << "You Lose.\n";
 		exit(1);
 	}
-	else if(score1 > 0){
-		 std::system("clear");
-	     cout << "You Win." << endl;
-	     exit(1);
-	}*/
+	if(score1 < 0 && score2 > 0){
+		std::system("clear");
+		cout << "You Lose!\n";
+		exit(1);
+	}else if(score1 > 0 && score2 < 0){
+		std::system("clear");
+		cout << "You Win!\n";
+	    exit(1);
+	}
 	
-	               }
 	               /*cout << "Here's your first question for 100 points" << endl;
 	               cout << "What's the first letterin the alphabet?" << endl;
 	               cout << "a. A" << endl;
