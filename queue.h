@@ -1,4 +1,4 @@
-#include<iostream>
+include<iostream>
 using namespace std;
 class queue{
   struct node{
@@ -21,7 +21,7 @@ class queue{
       rear->next = NULL;
     }
   }
-  int remove(){
+  int pop(){
     int x;
     if(front == NULL) {
       cout<<"empty queue\n";
