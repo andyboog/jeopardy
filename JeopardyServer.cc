@@ -75,8 +75,10 @@ int main() {
 			boost::array<char, 128> buf2;
 			size_t len1 = socket1.read_some(asio::buffer(buf1), error);
 			size_t len2 = socket2.read_some(asio::buffer(buf2), error);
-			points1 = stoi(buf1.data());
-			points2 = stoi(buf2.data());
+			string pts1 = buf1.data();
+			string pts2 = buf2.data();
+			points1 = stoi(pts1);
+			points2 = stoi(pts2);
 			if(points1 < 0){
 				points1 *= -1;
 				scores1.push(incorrect(scores1, points1));
