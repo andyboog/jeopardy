@@ -21,6 +21,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -34,6 +40,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -47,6 +59,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -60,6 +78,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -73,6 +97,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -95,6 +125,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -109,6 +145,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -122,6 +164,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -135,6 +183,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -148,6 +202,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -170,6 +230,12 @@ bool AmericanHistory(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'A'){
             return true;
         }
@@ -182,6 +248,12 @@ bool AmericanHistory(int points){
         cout << "C. What is the Great Depression?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'B'){
             return true;
         }
@@ -194,6 +266,12 @@ bool AmericanHistory(int points){
         cout << "C. What is hemp" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'C'){
             return true;
         }
@@ -206,6 +284,12 @@ bool AmericanHistory(int points){
         cout << "C. When was 1846?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'C'){
             return true;
         }
@@ -218,6 +302,12 @@ bool AmericanHistory(int points){
         cout << "C. Who was George Washington?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'A'){
             return true;
         }
@@ -240,6 +330,12 @@ bool Disney(int points){
         cout << "C. Who is Ariel?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -253,6 +349,12 @@ bool Disney(int points){
         cout << "who is Abu?" << endl;//correct
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -266,6 +368,12 @@ bool Disney(int points){
         cout << "what is 5 dozen?" << endl;//correct
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -279,6 +387,12 @@ bool Disney(int points){
         cout << "who is Chris Rock?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -292,6 +406,12 @@ bool Disney(int points){
         cout << "what is the Lion King?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -314,6 +434,12 @@ bool BowlingTerms(int points){
         cout << "C. What is jam?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'A'){
             return true;
         }
@@ -326,6 +452,12 @@ bool BowlingTerms(int points){
         cout << "C. What is an address?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'C'){
             return true;
         }
@@ -339,6 +471,12 @@ bool BowlingTerms(int points){
         cout << "C. What is a line?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'B'){
             return true;
         }
@@ -352,6 +490,12 @@ bool BowlingTerms(int points){
         cout << "C. What is a five-bagger?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'C'){
             return true;
         }
@@ -365,6 +509,12 @@ bool BowlingTerms(int points){
         cout << "C. What is a tandem?" << endl;
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'A'){
             return true;
         }
