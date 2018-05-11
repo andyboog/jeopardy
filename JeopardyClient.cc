@@ -69,6 +69,7 @@ int main() {
 	asio::write(socket, boost::asio::buffer(num1),asio::transfer_all());*/
 	//std::system("clear");
 	boost::array<char, 128> buf;
+
 	size_t len = socket.read_some(asio::buffer(buf), error);
 	//cout << buf.data()<< endl;
 	string pre = buf.data();
@@ -105,6 +106,11 @@ int main() {
 		int points;
 		string pointStr;
 		cin >> points;
+		if(!isdigit(points)){
+			while(!isdigit(points)){
+				cout << "Invalid Response. Please try again: ";
+			}
+		}
 		pointStr = to_string(points);
 		std::system("clear");
 		if (category != "GAMING" && category != "NORSE MYTHOLOGY" && category != "AMERICAN HISTORY" && category != "JEOPARDY" && category != "DISNEY" && category != "BOWLING TERMS") {
