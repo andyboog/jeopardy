@@ -52,8 +52,7 @@ bool gaming(int points){
         }
         else return false;
     }
-
-    if(points == 400){
+	if(points == 400){
         cout << "Donkey Kongs captive in ... Donkey Kong." << endl;
         cout << "A. Who is Princess Peach?" << endl;
         cout << "B. Who is Princess Daisy?" << endl;
@@ -112,6 +111,8 @@ bool NorseMythology(int points){
         }
         else return false;
     }
+    if(points == 300){
+	    cout << 
 }
 
 bool AmericanHistory(int points){
@@ -169,19 +170,6 @@ bool AmericanHistory(int points){
         else return false;
     }
     if(points == 500){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        char answer;
-        cin >> answer;
-        if(toupper(answer) == 'B'){
-            return true;
-        }
-        else return false;
-    }
-    if(points == 600){
         //another sudo question
         cout << "" << endl;
         cout << "" << endl;
@@ -268,26 +256,9 @@ bool Disney(int points){
         }
         else return false;
     }
-
-    if(points == 600){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        char answer;
-        cin >> answer;
-        if(toupper(answer) == 'B'){
-            return true;
-        }
-        else return false;
-    }
 }
 
-//this is just a sudo category, since I'm not sure what Dylan wants the last one to be
-
 bool BowlingTerms(int points){
-    // get it?... it starts with a 'b'...hehe :)
     if(points == 100){
         // definitely a sudo question
         cout << "Bowling trash talk" << endl;
@@ -341,19 +312,6 @@ bool BowlingTerms(int points){
         else return false;
     }
     if(points == 500){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        char answer;
-        cin >> answer;
-        if(toupper(answer) == 'B'){
-            return true;
-        }
-        else return false;
-    }
-    if(points == 600){
         //another sudo question
         cout << "" << endl;
         cout << "" << endl;
