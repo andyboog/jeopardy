@@ -168,17 +168,7 @@ int main() {
 					asio::write(socket, boost::asio::buffer(pointStr), asio::transfer_all());
 				}
 
-			}/* else if (category == "JEOPARDY") {
-				if (Jeopardy(points)) {
-					cout << "That is correct!" << endl;
-					asio::write(socket, boost::asio::buffer(pointStr), asio::transfer_all());
-				} else {
-					cout << "Sorry! That is incorrect!" << endl;
-					pointStr = to_string(-points);
-					asio::write(socket, boost::asio::buffer(pointStr), asio::transfer_all());
-				}
-
-			}*/
+			}
 			boost::array<char, 128> pts;
 			size_t len5 = socket.read_some(asio::buffer(pts), error);
 			string placeholder = pts.data();
