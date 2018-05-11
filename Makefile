@@ -1,4 +1,12 @@
-a.out: main.cc scores.h jeopardyArt.h trivia.h
-  g++ -std=c++11 main.cc 
+CC = g++
+CCFLAGS = -std=c++11
+
+all: JeopardyClient JeopardyServer
+
+JeopardyClient: JeopardyClient.cc jeopardyArt.h trivia.h catchecker.h
+	$(CC) $(CCFLAGS) -O3 JeopardyClient.cc -lncurses -lboost_system -lboost_thread -pthread -oJeopardyClient
+
+JeopardyServer: JeopardyServer.cc scores.h queue.h
+	$(CC) $(CCFLAGS) -O3 JeopardyServer.cc -lboost_system -lboost_thread -pthread -oJeopardyServer
 clean:
-  rm a.out
+	rm -f JeopardyClient JeopardyServer *.o core
