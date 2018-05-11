@@ -430,8 +430,8 @@ bool BowlingTerms(int points){
         cout << "C. What is jam?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -448,8 +448,8 @@ bool BowlingTerms(int points){
         cout << "C. What is an address?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -467,8 +467,8 @@ bool BowlingTerms(int points){
         cout << "C. What is a line?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -486,8 +486,8 @@ bool BowlingTerms(int points){
         cout << "C. What is a five-bagger?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -505,8 +505,8 @@ bool BowlingTerms(int points){
         cout << "C. What is a tandem?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
