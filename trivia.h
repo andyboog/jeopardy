@@ -296,6 +296,13 @@ bool Disney(int points){
 }
 
 bool BowlingTerms(int points){
+    LinkedList bowling_ans;
+    bowling_ans.push('A');
+    bowling_ans.push('C');
+    bowling_ans.push('B');
+    bowling_ans.push('C');
+    bowling_ans.push('A');
+	
     if(points == 100){
         cout << "Bowling trash talk." << endl;
         cout << "A. What is balk?" << endl;
