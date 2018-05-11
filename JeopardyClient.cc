@@ -176,13 +176,13 @@ int main() {
 			string sc2;
 			int j = 0;
 			for (int i = 0; i < placeholder.length() - 3; ++i) {
-				sc1[j] = placeholder[i];
+				sc1.push_back(placeholder[i]);
 				++j;
 			}
 			score1 = stoi(sc1);
 			j = 0;
 			for (int i = 3; i < placeholder.length(); ++i) {
-				sc2[j] = placeholder[i];
+				sc2.push_back(placeholder[i]);
 				++j;
 			}
 			score1 = stoi(sc1);
