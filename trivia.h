@@ -17,8 +17,8 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
