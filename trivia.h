@@ -95,8 +95,7 @@ bool gaming(int points){
         cin >> answer;
 	if(!isalpha(answer)){
 		while(!isalpha(answer)){
-			cout << "Invalid Response. Please try again: ";
-			cin >> answer;
+			cout << "Invalid Response. Please try again: ";			cin >> answer;
 		}
 	}
         if(toupper(answer) == gaming_ans.pop()){
@@ -122,7 +121,7 @@ bool NorseMythology(int points){
         char answer;
         cin >> answer;
 	if(!isalpha(answer)){
-		while(!isaplha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
