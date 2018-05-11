@@ -1,6 +1,5 @@
 #include<iostream>
 #include<cmath>
-#include "queue.h"
 using namespace std;
 
 // "int b" should be the amount of points the player receives
