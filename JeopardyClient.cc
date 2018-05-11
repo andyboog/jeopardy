@@ -107,11 +107,6 @@ int main() {
 		int points;
 		string pointStr;
 		cin >> points;
-		if(!isdigit(points)){
-			while(!isdigit(points)){
-				cout << "Invalid Response. Please try again: ";
-			}
-		}
 		pointStr = to_string(points);
 		std::system("clear");
 		if (category != "GAMING" && category != "NORSE MYTHOLOGY" && category != "AMERICAN HISTORY" && category != "JEOPARDY" && category != "DISNEY" && category != "BOWLING TERMS") {
