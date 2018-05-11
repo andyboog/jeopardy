@@ -2,10 +2,6 @@
 #include<vector>
 #include "linkedlist.h"
 
-//so once I load more of the questions, we can just have the player ask for a category and the number of points
-//the number of points will determine which question is picked
-//let me know if you would like to do something different
-
 bool gaming(int points){
     LinkedList gaming_ans;
     gaming_ans.push('B');
@@ -21,6 +17,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -34,6 +36,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!cin){
+		while(!cin){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -47,13 +55,18 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
         else return false;
     }
-
-    if(points == 400){
+	if(points == 400){
         cout << "Donkey Kongs captive in ... Donkey Kong." << endl;
         cout << "A. Who is Princess Peach?" << endl;
         cout << "B. Who is Princess Daisy?" << endl;
@@ -61,6 +74,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -74,6 +93,11 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";			cin >> answer;
+		}
+	}
         if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
@@ -84,6 +108,9 @@ bool gaming(int points){
 bool NorseMythology(int points){
     LinkedList norsemythology;
     norsemythology.push('A');
+    norsemythology.push('C');
+    norsemythology.push('B');
+    norsemythology.push('A');
     norsemythology.push('B');
     if(points == 100){
         cout << "Commonly believed to be one in the same with Odins Wife Frigga." << endl;
@@ -93,6 +120,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -107,6 +140,69 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == norsemythology.pop()){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 300){
+        cout << "The being of whom the Earth is believed to be made." << endl;
+        cout << "A. What is Odin?" << endl;
+        cout << "B. What is Ymir?" << endl;
+        cout << "C. What is Vili?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == norsemythology.pop()){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 400){
+        cout << "Loki shaved his/her/their head(s) as a prank." << endl;
+        cout << "A. Who is Thor?" << endl;
+        cout << "B. Who are the dwarves?" << endl;
+        cout << "C. Who is Sif?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == norsemythology.pop()){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 500){
+        cout << "Thor dressed up as a woman to protect them/him/her/it." << endl;
+        cout << "A. Who is Freyja?" << endl;
+        cout << "B. What is Thor's hammer?" << endl;
+        cout << "C. Who are Thor's children?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == norsemythology.pop()){
             return true;
         }
@@ -115,8 +211,13 @@ bool NorseMythology(int points){
 }
 
 bool AmericanHistory(int points){
+    LinkedList history_ans;
+    history_ans.push('A');
+    history_ans.push('C');
+    history_ans.push('C');
+    history_ans.push('B');
+    history_ans.push('A');
     if(points == 100){
-        //stupid sudo question
         cout << "Colors of the American Flag" << endl;
         cout << "A. What are Red, White, and Blue?" << endl;
         cout << "B. What are Red and White?" << endl;
@@ -124,72 +225,85 @@ bool AmericanHistory(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'A'){
             return true;
         }
         else return false;
     }
-	if(points == 200){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+    if(points == 200){
+        cout << "The era when flour sacks were at the peak of the fashion industry." << endl;
+        cout << "A. What is the Civil War?" << endl;
+        cout << "B. What is the Dust Bowl?" << endl;
+        cout << "C. What is the Great Depression?" << endl;
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'B'){
             return true;
         }
         else return false;
     }
     if(points == 300){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "Material on which the Delaration of Independence was originally written." << endl;
+        cout << "A. What is paper?" << endl;
+        cout << "B. What is wood?" << endl;
+        cout << "C. What is hemp" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
-	if(points == 400){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+    if(points == 400){
+        cout << "The last time the Liberty Bell was last wrung." << endl;
+        cout << "A. When was 2015?" << endl;
+        cout << "B. When was 1776?" << endl;
+        cout << "C. When was 1846?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 500){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "America's first ginger president." << endl;
+        cout << "A. Who was Thomas Jefferson?" << endl;
+        cout << "B. Who was Franklin Roosevelt?" << endl;
+        cout << "C. Who was George Washington?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
-            return true;
-        }
-        else return false;
-    }
-    if(points == 600){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        char answer;
-        cin >> answer;
-        if(toupper(answer) == 'B'){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == 'A'){
             return true;
         }
         else return false;
@@ -211,6 +325,12 @@ bool Disney(int points){
         cout << "C. Who is Ariel?" << endl;
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -224,6 +344,12 @@ bool Disney(int points){
         cout << "who is Abu?" << endl;//correct
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -237,6 +363,12 @@ bool Disney(int points){
         cout << "what is 5 dozen?" << endl;//correct
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -250,6 +382,12 @@ bool Disney(int points){
         cout << "who is Chris Rock?" << endl;
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
             return true;
         }
@@ -263,65 +401,77 @@ bool Disney(int points){
         cout << "what is the Lion King?" << endl;
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == disney_ans.pop()){
-            return true;
-        }
-        else return false;
-    }
-
-    if(points == 600){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        char answer;
-        cin >> answer;
-        if(toupper(answer) == 'B'){
             return true;
         }
         else return false;
     }
 }
 
-//this is just a sudo category, since I'm not sure what Dylan wants the last one to be
-
 bool BowlingTerms(int points){
-    // get it?... it starts with a 'b'...hehe :)
+    LinkedList bowling_ans;
+    bowling_ans.push('A');
+    bowling_ans.push('C');
+    bowling_ans.push('B');
+    bowling_ans.push('C');
+    bowling_ans.push('A');
+	
     if(points == 100){
-        // definitely a sudo question
-        cout << "Bowling trash talk" << endl;
+        cout << "Bowling trash talk." << endl;
         cout << "A. What is balk?" << endl;
         cout << "B. What is balsa?" << endl;
         cout << "C. What is jam?" << endl;
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'A'){
             return true;
         }
         else return false;
     }
     if(points == 200){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "A bowler's starting position." << endl;
+        cout << "A. What is an alley?" << endl;
+        cout << "B. What is a curve?" << endl;
+        cout << "C. What is an address?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 300){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "An array of pins left standing." << endl;
+        cout << "A. What is a honey?" << endl;
+        cout << "B. What are grandma's teeth?" << endl;
+        cout << "C. What is a line?" << endl;
         char answer;
         cin >> answer;
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
         if(toupper(answer) == 'B'){
             return true;
         }
@@ -329,39 +479,38 @@ bool BowlingTerms(int points){
     }
 	if(points == 400){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "Five strikes in a row." << endl;
+        cout << "A. What is a half-hit?" << endl;
+        cout << "B. What is a kegler?" << endl;
+        cout << "C. What is a five-bagger?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 500){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "The path taken by a sharp curve ball." << endl;
+        cout << "A. What is a scenic route?" << endl;
+        cout << "B. What is a curve?" << endl;
+        cout << "C. What is a tandem?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
-            return true;
-        }
-        else return false;
-    }
-    if(points == 600){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        char answer;
-        cin >> answer;
-        if(toupper(answer) == 'B'){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
+			cout << "Invalid Response. Please try again: ";
+			cin >> answer;
+		}
+	}
+        if(toupper(answer) == 'A'){
             return true;
         }
         else return false;

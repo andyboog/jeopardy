@@ -69,6 +69,7 @@ int main() {
 	asio::write(socket, boost::asio::buffer(num1),asio::transfer_all());*/
 	//std::system("clear");
 	boost::array<char, 128> buf;
+
 	size_t len = socket.read_some(asio::buffer(buf), error);
 	//cout << buf.data()<< endl;
 	string pre = buf.data();
@@ -79,6 +80,7 @@ int main() {
 		++j;
 	}
 //	sleep(500);
+	categoryArt();
 	cout << "To start this game, you will need to choose from which category the question will come." << endl;
 	cout << "The categories offered are: GAMING, NORSE MYTHOLOGY (not the Marvel kind), AMERICAN HISTORY," << endl;
 	cout << "JEOPARDY, DISNEY, and BOWLING TERMS." << endl;
@@ -88,7 +90,7 @@ int main() {
 	getline(cin, input);
 	int score1 = 0;
 	int score2 = 0;
-	int numQues = 14;
+	int numQues = 25;
 	while(numQues != 0) {
 		std::system("clear");
 		categoryArt();
@@ -100,10 +102,8 @@ int main() {
 		getline(cin, category);
 		category = convert(category);
 		cout << "Awesome! Next you will need to choose how many points you would like the question to be worth." << endl;
-		cout << "The points range from 100 - 600 by increments of 100." << endl;
+		cout << "The points range from 100 - 500 by increments of 100." << endl;
 		cout << "Note: You can only choose each point value once throughout the game." << endl;
-		cout << "ALSO ONLY 100 WORKS AT THIS TIME!!!!!" << endl;
-		//Sorry bout that! I'm working on adding the other ones right now.
 		int points;
 		string pointStr;
 		cin >> points;
@@ -205,60 +205,29 @@ int main() {
 	}
 	if (score1 < 0 && score2 < 0) {
 		std::system("clear");
-		cout << "You Lose.\n";
+		loseArt();
 		exit(1);
 	}
 	if (score1 < 0 && score2 > 0) {
 		std::system("clear");
-		cout << "You Lose!\n";
+		loseArt();
 		exit(1);
 	} 
 	if (score1 > 0 && score2 < 0) {
 		std::system("clear");
-		cout << "You Win!\n";
+		winArt();
 		exit(1);
 	}
 	if(score1 > score2){
-		std::system("clear");
-	    cout << "You Win!\n";
+	    std::system("clear");
+	    winArt();
 	    exit(1);
 	}
 	if(score1 < score2){
-		std::system("clear");
-	    cout << "You Lose!\n";
+	    std::system("clear");
+	    loseArt();
 	    exit(1);
 	}
-
-	/*cout << "Here's your first question for 100 points" << endl;
-	cout << "What's the first letterin the alphabet?" << endl;
-	cout << "a. A" << endl;
-	cout << "b. B" << endl;
-	cout << "c. C" << endl;
-	queue<int>scores;
-	char answer;
-	cin >> answer;
-	if (answer != 'a') {
-		cout << "That was incorrect!" << endl;
-		scores.push(-100);
-	} else {
-		scores.push(100);
-	}
-	cout << "Your current score is: " << scores.back() << endl;
-	cout << "On to your next question for 200 points" << endl;
-	cout << "If you are given 3 rubber ducks, how many rubber ducks do you have?" << endl;
-	cout << "a. 3" << endl;
-	cout << "b. 5" << endl;
-	cout << "c. this question is stupid lol" << endl;
-	cin >> answer;
-	if (answer == 'a' || answer == 'c') {
-		scores.push(correct(scores, 200));
-	} else {
-		scores.push(incorrect(scores, 200));
-		cout << "That was incorrect!" << endl;
-	}
-	cout << "Congratulations you finished with " << scores.back() << " points!" << endl;
-
-	*/
 
 }
 
