@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<string>
-#include<queue>
+#include "queue.h"
 #include<vector>
 #include<unistd.h>
 #include "scores.h"
@@ -11,7 +11,7 @@
 using namespace std;
 
 int main() {
-	queue<int>scores;
+	queue scores;
 	scores.push(0);
 	system("clear");
 	cout << "Welcome to..." << endl;
