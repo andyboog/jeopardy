@@ -1,11 +1,18 @@
 #include<iostream>
 #include<vector>
+#include "linkedlist.h"
 
 //so once I load more of the questions, we can just have the player ask for a category and the number of points
 //the number of points will determine which question is picked
 //let me know if you would like to do something different
 
 bool gaming(int points){
+    LinkedList gaming_ans;
+    gaming_ans.push('B');
+    gaming_ans.push('C');
+    gaming_ans.push('B');
+    gaming_ans.push('C');
+    gaming_ans.push('A');
     if(points == 100){
         cout << "Backup Agents in Elite Beat Agents." << endl;
         cout << "A. Who are Agents Morris and Derek?" << endl;
@@ -14,7 +21,7 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'A'){
+        if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
         else return false;
@@ -27,7 +34,7 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'C'){
+        if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
         else return false;
@@ -40,11 +47,12 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
         else return false;
     }
+
     if(points == 400){
         cout << "Donkey Kongs captive in ... Donkey Kong." << endl;
         cout << "A. Who is Princess Peach?" << endl;
@@ -53,7 +61,7 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'C'){
+        if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
         else return false;
@@ -66,7 +74,7 @@ bool gaming(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == gaming_ans.pop()){
             return true;
         }
         else return false;
@@ -74,6 +82,9 @@ bool gaming(int points){
 }
 
 bool NorseMythology(int points){
+    LinkedList norsemythology;
+    norsemythology.push('A');
+    norsemythology.push('B');
     if(points == 100){
         cout << "Commonly believed to be one in the same with Odins Wife Frigga." << endl;
         cout << "A. Who is Lady Sif?" << endl;
@@ -82,11 +93,12 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == norsemythology.pop()){
             return true;
         }
         else return false;
     }
+
     if(points == 200){
         cout << "The end of the world according to Norse mythology." << endl;
         cout << "A. What is Ragnarok?" << endl;
@@ -95,7 +107,7 @@ bool NorseMythology(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'A'){
+        if(toupper(answer) == norsemythology.pop()){
             return true;
         }
         else return false;
@@ -185,6 +197,12 @@ bool AmericanHistory(int points){
 }
 
 bool Disney(int points){
+    LinkedList disney_ans;
+    disney_ans.push('B');
+    disney_ans.push('A');
+    disney_ans.push('C');
+    disney_ans.push('C');
+    disney_ans.push('A');
     if(points == 100){
         //another sudo question
         cout << "She was trapped in a tower" << endl;
@@ -193,12 +211,12 @@ bool Disney(int points){
         cout << "C. Who is Ariel?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == disney_ans.pop()){
             return true;
         }
         else return false;
     }
-	    if(points == 200){
+        if(points == 200){
         //another sudo question
         cout << "Aladdin's pet monkey" << endl;
         cout << "who is Apu?" << endl;
@@ -206,7 +224,7 @@ bool Disney(int points){
         cout << "who is Abu?" << endl;//correct
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'C'){
+        if(toupper(answer) == disney_ans.pop()){
             return true;
         }
         else return false;
@@ -219,12 +237,12 @@ bool Disney(int points){
         cout << "what is 5 dozen?" << endl;//correct
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'C'){
+        if(toupper(answer) == disney_ans.pop()){
             return true;
         }
         else return false;
     }
-	if(points == 400){
+    if(points == 400){
         //another sudo question
         cout << "In Mulan, which actor played the voice of Mushu?" << endl;
         cout << "who is Eddie Murphy?" << endl;//correct
@@ -232,7 +250,7 @@ bool Disney(int points){
         cout << "who is Chris Rock?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'A'){
+        if(toupper(answer) == disney_ans.pop()){
             return true;
         }
         else return false;
@@ -245,11 +263,12 @@ bool Disney(int points){
         cout << "what is the Lion King?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == disney_ans.pop()){
             return true;
         }
         else return false;
     }
+
     if(points == 600){
         //another sudo question
         cout << "" << endl;
