@@ -112,7 +112,44 @@ bool NorseMythology(int points){
         else return false;
     }
     if(points == 300){
-	    cout << 
+        cout << "The end of the world according to Norse mythology." << endl;
+        cout << "A. What is Ragnarok?" << endl;
+        cout << "B. What is Mjolnir?" << endl;
+        cout << "C. What is Gungnir?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == norsemythology.pop()){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 400){
+        cout << "The end of the world according to Norse mythology." << endl;
+        cout << "A. What is Ragnarok?" << endl;
+        cout << "B. What is Mjolnir?" << endl;
+        cout << "C. What is Gungnir?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == norsemythology.pop()){
+            return true;
+        }
+        else return false;
+    }
+    if(points == 500){
+        cout << "The end of the world according to Norse mythology." << endl;
+        cout << "A. What is Ragnarok?" << endl;
+        cout << "B. What is Mjolnir?" << endl;
+        cout << "C. What is Gungnir?" << endl;
+        cout << "type answer here: ";
+        char answer;
+        cin >> answer;
+        if(toupper(answer) == norsemythology.pop()){
+            return true;
+        }
+        else return false;
+    }
 }
 
 bool AmericanHistory(int points){
@@ -260,8 +297,7 @@ bool Disney(int points){
 
 bool BowlingTerms(int points){
     if(points == 100){
-        // definitely a sudo question
-        cout << "Bowling trash talk" << endl;
+        cout << "Bowling trash talk." << endl;
         cout << "A. What is balk?" << endl;
         cout << "B. What is balsa?" << endl;
         cout << "C. What is jam?" << endl;
@@ -273,24 +309,23 @@ bool BowlingTerms(int points){
         else return false;
     }
     if(points == 200){
-        //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "A bowler's starting position." << endl;
+        cout << "A. What is an alley?" << endl;
+        cout << "B. What is a curve?" << endl;
+        cout << "C. What is an address?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 300){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "An array of pins left standing." << endl;
+        cout << "A. What is a honey?" << endl;
+        cout << "B. What are grandma's teeth?" << endl;
+        cout << "C. What is a line?" << endl;
         char answer;
         cin >> answer;
         if(toupper(answer) == 'B'){
@@ -300,26 +335,26 @@ bool BowlingTerms(int points){
     }
 	if(points == 400){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "Five strikes in a row." << endl;
+        cout << "A. What is a half-hit?" << endl;
+        cout << "B. What is a kegler?" << endl;
+        cout << "C. What is a five-bagger?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'C'){
             return true;
         }
         else return false;
     }
     if(points == 500){
         //another sudo question
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
+        cout << "The path taken by a sharp curve ball." << endl;
+        cout << "A. What is a scenic route?" << endl;
+        cout << "B. What is a curve? << endl;
+        cout << "C. What is a tandem?" << endl;
         char answer;
         cin >> answer;
-        if(toupper(answer) == 'B'){
+        if(toupper(answer) == 'A'){
             return true;
         }
         else return false;
