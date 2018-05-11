@@ -3,7 +3,7 @@ using namespace std;
 
 class LinkedList {
     struct Node {
-        int x;
+        char x;
         Node *next;
     };
 
@@ -22,16 +22,16 @@ class LinkedList {
         }
     }
 
-    void addValue(int val) {
+    void push(char val) {
         Node *n = new Node();
         n->x = val;
         n->next = head;
         head = n;
     }
 
-    int popValue() {
+    char pop() {
         Node *n = head;
-        int ret = n->x;
+        char ret = n->x;
 
         head = head->next;
         delete n;
