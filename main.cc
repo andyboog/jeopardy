@@ -94,11 +94,7 @@ int main() {
 		}
 		cout << "Current Point Value: " << scores.back() << endl;
 
-	} else if (category == "JEOPARDY") {
-		//I'll also add a sudo question for this category
-		cout << "UNDER CONSTRUCTION!!!! SORRYYY!!!" << endl;
-		exit(0);
-	}
+	} 
 	/*cout << "Here's your first question for 100 points" << endl;
 	cout << "What's the first letterin the alphabet?" << endl;
 	cout << "a. A" << endl;
