@@ -83,6 +83,9 @@ bool gaming(int points){
 bool NorseMythology(int points){
     LinkedList norsemythology;
     norsemythology.push('A');
+    norsemythology.push('C');
+    norsemythology.push('B');
+    norsemythology.push('A');
     norsemythology.push('B');
     if(points == 100){
         cout << "Commonly believed to be one in the same with Odins Wife Frigga." << endl;
@@ -112,10 +115,10 @@ bool NorseMythology(int points){
         else return false;
     }
     if(points == 300){
-        cout << "The end of the world according to Norse mythology." << endl;
-        cout << "A. What is Ragnarok?" << endl;
-        cout << "B. What is Mjolnir?" << endl;
-        cout << "C. What is Gungnir?" << endl;
+        cout << "The being of whom the Earth is believed to be made." << endl;
+        cout << "A. What is Odin?" << endl;
+        cout << "B. What is Ymir?" << endl;
+        cout << "C. What is Vili?" << endl;
         cout << "type answer here: ";
         char answer;
         cin >> answer;
@@ -125,10 +128,10 @@ bool NorseMythology(int points){
         else return false;
     }
     if(points == 400){
-        cout << "The end of the world according to Norse mythology." << endl;
-        cout << "A. What is Ragnarok?" << endl;
-        cout << "B. What is Mjolnir?" << endl;
-        cout << "C. What is Gungnir?" << endl;
+        cout << "Loki shaved his/her/their head(s) as a prank." << endl;
+        cout << "A. Who is Thor?" << endl;
+        cout << "B. Who are the dwarves?" << endl;
+        cout << "C. Who is Sif?" << endl;
         cout << "type answer here: ";
         char answer;
         cin >> answer;
@@ -138,10 +141,10 @@ bool NorseMythology(int points){
         else return false;
     }
     if(points == 500){
-        cout << "The end of the world according to Norse mythology." << endl;
-        cout << "A. What is Ragnarok?" << endl;
-        cout << "B. What is Mjolnir?" << endl;
-        cout << "C. What is Gungnir?" << endl;
+        cout << "Thor dressed up as a woman to protect them/him/her/it." << endl;
+        cout << "A. Who is Freyja?" << endl;
+        cout << "B. What is Thor's hammer?" << endl;
+        cout << "C. Who are Thor's children?" << endl;
         cout << "type answer here: ";
         char answer;
         cin >> answer;
