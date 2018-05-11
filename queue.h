@@ -1,38 +1,41 @@
-include<iostream>
+#include<iostream>
 using namespace std;
 class queue{
   struct node{
         int data;
         node *next;
-  }*front = NULL,*rear = NULL,*p = NULL,*np = NULL;
+  }*head = NULL,*tail = NULL,*p = NULL,*np = NULL;
 
   public:
   void push(int x){
     np = new node;
     np->data = x;
     np->next = NULL;
-    if(front == NULL){
-      front = rear = np;
-      rear->next = NULL;
+    if(head == NULL){
+      head = tail = np;
+      tail->next = NULL;
     }
     else {
-      rear->next = np;
-      rear = np;
-      rear->next = NULL;
+      tail->next = np;
+      tail = np;
+      tail->next = NULL;
     }
   }
   int pop(){
     int x;
-    if(front == NULL) {
+    if(head == NULL) {
       cout<<"empty queue\n";
     }
     else {
-      p = front;
+      p = head;
       x = p->data;
-      front = front->next;
+      head = head->next;
       delete(p);
       return(x);
     }
+  }
+  int back(){
+    return tail->data;
   }
 };
 
