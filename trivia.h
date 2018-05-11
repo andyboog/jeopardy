@@ -2,10 +2,6 @@
 #include<vector>
 #include "linkedlist.h"
 
-//so once I load more of the questions, we can just have the player ask for a category and the number of points
-//the number of points will determine which question is picked
-//let me know if you would like to do something different
-
 bool gaming(int points){
     LinkedList gaming_ans;
     gaming_ans.push('B');
@@ -505,7 +501,7 @@ bool BowlingTerms(int points){
         //another sudo question
         cout << "The path taken by a sharp curve ball." << endl;
         cout << "A. What is a scenic route?" << endl;
-        cout << "B. What is a curve? << endl;
+        cout << "B. What is a curve?" << endl;
         cout << "C. What is a tandem?" << endl;
         char answer;
         cin >> answer;
