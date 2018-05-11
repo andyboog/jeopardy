@@ -90,7 +90,7 @@ int main() {
 	getline(cin, input);
 	int score1 = 0;
 	int score2 = 0;
-	int numQues = 14;
+	int numQues = 25;
 	while(numQues != 0) {
 		std::system("clear");
 		categoryArt();
