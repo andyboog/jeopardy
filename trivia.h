@@ -153,6 +153,12 @@ bool NorseMythology(int points){
 }
 
 bool AmericanHistory(int points){
+    LinkedList history_ans;
+    history_ans.push('A');
+    history_ans.push('C');
+    history_ans.push('C');
+    history_ans.push('B');
+    history_ans.push('A');
     if(points == 100){
         cout << "Colors of the American Flag" << endl;
         cout << "A. What are Red, White, and Blue?" << endl;
