@@ -226,8 +226,8 @@ bool AmericanHistory(int points){
         cout << "type answer here: ";
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -244,8 +244,8 @@ bool AmericanHistory(int points){
         cout << "C. What is the Great Depression?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -262,8 +262,8 @@ bool AmericanHistory(int points){
         cout << "C. What is hemp" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -280,8 +280,8 @@ bool AmericanHistory(int points){
         cout << "C. When was 1846?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -298,8 +298,8 @@ bool AmericanHistory(int points){
         cout << "C. Who was George Washington?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -326,8 +326,8 @@ bool Disney(int points){
         cout << "C. Who is Ariel?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -345,8 +345,8 @@ bool Disney(int points){
         cout << "who is Abu?" << endl;//correct
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -364,8 +364,8 @@ bool Disney(int points){
         cout << "what is 5 dozen?" << endl;//correct
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -383,8 +383,8 @@ bool Disney(int points){
         cout << "who is Chris Rock?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
@@ -402,8 +402,8 @@ bool Disney(int points){
         cout << "what is the Lion King?" << endl;
         char answer;
         cin >> answer;
-	if(!cin){
-		while(!cin){
+	if(!isalpha(answer)){
+		while(!isalpha(answer)){
 			cout << "Invalid Response. Please try again: ";
 			cin >> answer;
 		}
