@@ -1,11 +1,44 @@
-//so I found out that we have to make our own data structures, so that's what I'm gonna do here
-//please change anything that you would like to
-#include<iostream>
-struct node{
-  int data;
-  struct node *next;
- } *head;
- 
-void addtolist(int x){
-  
- 
+#include <iostream>
+using namespace std;
+
+class LinkedList {
+    struct Node {
+        int x;
+        Node *next;
+    };
+
+  public:
+    LinkedList() {
+        head = NULL;
+    }
+
+    ~LinkedList() {
+        Node *next = head;
+
+        while (next) {
+            Node *deleteMe = next;
+            next = next->next;
+            delete deleteMe;
+        }
+    }
+
+    void addValue(int val) {
+        Node *n = new Node();
+        n->x = val;
+        n->next = head;
+        head = n;
+    }
+
+    int popValue() {
+        Node *n = head;
+        int ret = n->x;
+
+        head = head->next;
+        delete n;
+        return ret;
+    }
+
+  private:
+    Node *head;
+};
+
